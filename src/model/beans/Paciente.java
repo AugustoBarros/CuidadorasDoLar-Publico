@@ -6,6 +6,10 @@ package model.beans;
  */
 public class Paciente {
     
+    
+    //116 colunas no banco
+    
+    
     //Aba de Dados do paciente
     
     private int idPaciente;
@@ -35,7 +39,7 @@ public class Paciente {
     private String cpfContratante;
     private String telefoneContratante;
     private String celularContratante;
-    private String estadoContratanteIndex;
+    private int estadoContratanteIndex;
     private String enderecoContratante;
     private String numeroContratante;
     private String complementoContratante;
@@ -357,11 +361,11 @@ public class Paciente {
         this.celularContratante = celularContratante;
     }
 
-    public String getEstadoContratanteIndex() {
+    public int getEstadoContratanteIndex() {
         return estadoContratanteIndex;
     }
 
-    public void setEstadoContratanteIndex(String estadoContratanteIndex) {
+    public void setEstadoContratanteIndex(int estadoContratanteIndex) {
         this.estadoContratanteIndex = estadoContratanteIndex;
     }
 

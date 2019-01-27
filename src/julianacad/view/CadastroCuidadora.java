@@ -18,7 +18,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.*;
 import model.beans.Cuidadora;
-import model.dao.CadastroDAO;
+import model.dao.CadastroCuidadoraDAO;
 
 /**
  *
@@ -2532,7 +2532,7 @@ public class CadastroCuidadora extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         Cuidadora c = new Cuidadora();
-        CadastroDAO dao = new CadastroDAO();
+        CadastroCuidadoraDAO dao = new CadastroCuidadoraDAO();
         
         //Cria pasta para guardar arquivos
 

@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import model.beans.Cuidadora;
-import model.dao.CadastroDAO;
+import model.dao.CadastroCuidadoraDAO;
 
 /**
  *
@@ -26,7 +26,7 @@ public class ConsultaCuidadora extends javax.swing.JInternalFrame {
      */
     public ConsultaCuidadora() {
         initComponents();
-        CadastroDAO re = new CadastroDAO();
+        CadastroCuidadoraDAO re = new CadastroCuidadoraDAO();
         Cuidadora c = new Cuidadora();
         
         

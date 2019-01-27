@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import model.beans.Cuidadora;
-import model.dao.CadastroDAO;
+import model.dao.CadastroCuidadoraDAO;
 //marca
 /**
  *
@@ -32,7 +32,7 @@ public class AtualizaCuidadora extends javax.swing.JInternalFrame {
     public AtualizaCuidadora() {
         
         initComponents();
-        CadastroDAO re = new CadastroDAO();
+        CadastroCuidadoraDAO re = new CadastroCuidadoraDAO();
         Cuidadora ca = new Cuidadora();
         
 
@@ -3315,7 +3315,7 @@ public class AtualizaCuidadora extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        CadastroDAO  alt = new CadastroDAO();
+        CadastroCuidadoraDAO  alt = new CadastroCuidadoraDAO();
         Cuidadora c = new Cuidadora();
         if(jRadioButton3.isSelected()){
             c.setTipoCuidadora(1);

@@ -1,6 +1,6 @@
 package julianacad.view;
 import model.beans.Cuidadora;
-import model.dao.CadastroDAO;
+import model.dao.CadastroCuidadoraDAO;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -30,7 +30,7 @@ public class ConsultaTabela extends javax.swing.JInternalFrame {
         
         DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
         jTable1.setRowSorter(new TableRowSorter(modelo));
-        CadastroDAO result = new CadastroDAO();
+        CadastroCuidadoraDAO result = new CadastroCuidadoraDAO();
         modelo.setNumRows(0);
 
         for(Cuidadora c: result.consultaTabela()){
@@ -375,7 +375,7 @@ public class ConsultaTabela extends javax.swing.JInternalFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         Cuidadora c = new Cuidadora();
-        CadastroDAO apaga = new CadastroDAO();
+        CadastroCuidadoraDAO apaga = new CadastroCuidadoraDAO();
         c.setIdCuidadora(AtualizaCuidadora.idRefe2);
         
         apaga.deletaRegistro(c);
@@ -397,7 +397,7 @@ public class ConsultaTabela extends javax.swing.JInternalFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         Cuidadora c = new Cuidadora();
-        CadastroDAO apaga = new CadastroDAO();
+        CadastroCuidadoraDAO apaga = new CadastroCuidadoraDAO();
         c.setIdCuidadora(AtualizaCuidadora.idRefe2);
         
         apaga.deletaRegistro(c);
