@@ -259,37 +259,134 @@ public class CadastroPacienteDAO {
             stmt.setString(i, p.getObsInfoComp());
             i++;
             
+            stmt.setInt(i, p.getBoxBanhoSuper());
+            i++;
             
+            stmt.setInt(i, p.getBoxBanhoCadeira());
+            i++;      
             
-            
+            stmt.setInt(i, p.getBoxBanheiroAdaptado());
+            i++;     
                     
+            stmt.setInt(i, p.getBoxBanhoLeito());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAlimentaseSolidos());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAlimentaseLiquidos());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAlimentasePorSonda());
+            i++;     
             
+            stmt.setInt(i, p.getBoxFazDieta());
+            i++;     
             
+            stmt.setString(i, p.getQualDieta());
+            i++;
             
+            stmt.setInt(i, p.getBoxDietaLiberada());
+            i++;     
             
+            stmt.setString(i, p.getQualDietaLiberada());
+            i++;
             
+            stmt.setInt(i, p.getBoxAndaSozinho());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAndaComAndador());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAndaComBengala());
+            i++;     
             
+            stmt.setInt(i, p.getBoxCadeirante());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAcamado());
+            i++;     
             
+            stmt.setInt(i, p.getBoxAndaCuidadora());
+            i++;         
             
+            stmt.setInt(i, p.getBoxUsaFralda());
+            i++;     
             
+            stmt.setInt(i, p.getBoxUsaFraldaNoite());
+            i++;     
             
+            stmt.setInt(i, p.getBoxEvacuaBanheiro());
+            i++;     
             
+            stmt.setInt(i, p.getBoxUsaComadrePapaguaio());
+            i++;     
             
+            stmt.setInt(i, p.getBoxSondaDeAlivio());
+            i++;     
             
+            stmt.setInt(i, p.getBoxSondaUretra());
+            i++;     
             
+            stmt.setInt(i, p.getBoxDormeSozinho());
+            i++;     
             
+            stmt.setInt(i, p.getBoxDormeAcompanhado());
+            i++;     
             
+            stmt.setInt(i, p.getBoxDormeNoiteToda());
+            i++;     
             
+            stmt.setInt(i, p.getBoxInsoniaPesadelo());
+            i++;     
             
+            stmt.setInt(i, p.getBoxMedicamentosDormir());
+            i++;     
             
+            stmt.setInt(i, p.getBoxTrocaDiaPorNoite());
+            i++;     
             
+            stmt.setInt(i, p.getBoxDormeDepoisRefeicao());
+            i++;     
             
+            stmt.setInt(i, p.getBoxGostaConversar());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxConversaPouco());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxNaoGostaConversar());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxAgressivo());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxAborrecido());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxAlteracoesHumor());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxDepressao());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxAlteracoesHumor());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxDepressao());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxBoaMemoria());
+            i++;     
+            
+            stmt.setInt(i, p.getBoxDesorientacao());
+            i++;     
+            
+            stmt.setString(i, p.getRestricaoCuidadoras());
+            i++;     
+            
+            stmt.setString(i, p.getObsGerais());
+            i++;     
             
             
             

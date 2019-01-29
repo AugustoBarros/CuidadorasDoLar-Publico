@@ -3,6 +3,8 @@ import java.awt.Graphics;
 import java.util.*;
 import java.awt.*;
 import javax.swing.ImageIcon;
+import model.beans.Paciente;
+import model.dao.CadastroPacienteDAO;
 
 /**
  *
@@ -547,6 +549,11 @@ public class CadastroPaciente extends javax.swing.JInternalFrame {
         jButton2.setBackground(new java.awt.Color(77, 166, 255));
         jButton2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         jButton2.setText("Salvar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         panelDadosPacienteContratante.add(jButton2);
         jButton2.setBounds(1040, 650, 130, 50);
 
@@ -2010,6 +2017,199 @@ public class CadastroPaciente extends javax.swing.JInternalFrame {
         }
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Paciente p = new Paciente();
+        CadastroPacienteDAO pDAO = new CadastroPacienteDAO();
+        
+        
+        
+        //numero contrato
+        p.setNumContrato(jTextField5.getText());
+        
+        //data visita
+        p.setDataVisita(txtFild11.getText());
+        
+        //nome paciente
+        p.setNomePaciente(jTextField32.getText());
+        
+        //religiao
+        p.setReligiãoIndex(jComboBox7.getSelectedIndex());
+        
+        //estado paciente
+        p.setEstadoPacienteIndex(jComboBox1.getSelectedIndex());
+        
+        //data de nascimento
+        p.setDataNascimento(txtFild10.getText());
+        
+        //idade
+        p.setIdade(jTextField10.getText());
+        
+        //endereco paciente
+        p.setEnderecoPaciente(jTextField11.getText());
+        
+        //numero paciente
+        p.setNumeroPaciente(jTextField8.getText());
+        
+        //complemento paciente
+        p.setComplementoPaciente(jTextField12.getText());
+        
+        //cep paciente
+        p.setCepPaciente(txtFild4.getText());
+        
+        //cidade paciente
+        if(jComboBox1.getSelectedIndex() == 17 || jComboBox1.getSelectedIndex() == 25 ){
+            p.setCidadeListPacienteIndex(cidadeComboBox1.getSelectedIndex());
+            p.setCidadeTxtPaciente("");
+        }else{
+            p.setCidadeListPacienteIndex(-1);
+            p.setCidadeTxtPaciente(jTextField7.getText());
+        }
+        
+        //bairro paciente
+        if(jComboBox1.getSelectedIndex() == 17 || jComboBox1.getSelectedIndex() == 25){
+            p.setBairroListPacienteIndex(bairroComboBox1.getSelectedIndex());
+            p.setBairroTxtPaciente("");
+        }else{
+            p.setBairroListPacienteIndex(-1);
+            p.setBairroTxtPaciente(jTextField9.getText());
+        }
+        
+        //regiao
+        p.setRegiaoListIndex(jComboBox8.getSelectedIndex());
+        
+        //box filho
+        if(jCheckBox23.isSelected()){
+            p.setBoxFilhos(1);
+        }else{
+            p.setBoxFilhos(0);
+        }
+        
+        //box neto
+        if(jCheckBox20.isSelected()){
+            p.setBoxNetos(1);
+        }else{
+            p.setBoxNetos(0);
+        }
+        
+        //box marido esposa
+        if(jCheckBox22.isSelected()){
+            p.setBoxMaridoEsposa(1);
+        }else{
+            p.setBoxMaridoEsposa(2);
+        }
+        
+        //box sozinho
+        if(jCheckBox82.isSelected()){
+            p.setBoxSozinho(1);
+        }else{
+            p.setBoxSozinho(2);
+        }
+        
+        //box outros
+        if(jCheckBox21.isSelected()){
+            p.setBoxOutros(1);
+        }else{
+            p.setBoxOutros(1);
+        }
+        
+        //campo outros na residencia tem
+        if(jCheckBox21.isSelected()){
+            p.setOutrosMoraCom(jTextField6.getText());
+        }else{
+             p.setOutrosMoraCom("");
+        }
+        
+        //nome contratante
+        p.setNomeContratante(jTextField30.getText());
+        
+        //cpf contratante
+        p.setCpfContratante(txtFild3.getText());
+        
+        //telefone contraante
+        p.setTelefoneContratante(txtFild5.getText());
+        
+        //celular
+        p.setCelularContratante(txtFild2.getText());
+        
+        //estado contratante
+        p.setEstadoContratanteIndex(jComboBox2.getSelectedIndex());
+        
+        //endereco contratante
+        p.setEnderecoContratante(jTextField14.getText());
+        
+        //numero contratante
+        p.setNumeroContratante(jTextField33.getText());
+        
+        //complemento contratante
+        p.setComplementoContratante(jTextField13.getText());
+        
+        //cep contratante
+        p.setCepContratante(txtFild6.getText());
+        
+        //cidade contratante
+        if(jComboBox2.getSelectedIndex() == 17 || jComboBox2.getSelectedIndex() == 25){
+            p.setCidadeListContratanteIndex(cidadeComboBox2.getSelectedIndex());
+            p.setCidadeTxtContratante("");
+        }else{
+            p.setCidadeListContratanteIndex(-1);
+            p.setCidadeTxtContratante(jTextField4.getText());
+        }
+        
+        //bairro contratante
+        if(jComboBox2.getSelectedIndex() == 17 || jComboBox2.getSelectedIndex() == 25){
+            p.setBairroListContratanteIndex(bairroComboBox2.getSelectedIndex());
+            p.setBairroTxtContratante("");
+        }else{
+            p.setBairroListContratanteIndex(-1);
+            p.setBairroTxtContratante(jTextField15.getText());
+        }
+        
+        //qual plano
+        p.setPlanoListIndex(jComboBox5.getSelectedIndex());
+        
+        //obs de plano
+        p.setObsPlano(jTextField35.getText());
+        
+        //Tem convenio sim nao
+        if(jRadioButton25.isSelected()){
+            p.setConvenioMedicoSimNao(1);
+        }else if(jRadioButton24.isSelected()){
+            p.setConvenioMedicoSimNao(2);
+        }
+        
+        //qual convenio
+        p.setQualConvenio(jTextField34.getText());
+        
+        //gosta animais sim nao
+        if(jRadioButton13.isSelected()){
+            p.setGostaAnimaisSimNao(1);
+        }else if (jRadioButton12.isSelected()){
+            p.setGostaAnimaisSimNao(2);
+        }
+        
+        //tem animais
+        if(jRadioButton14.isSelected()){
+            p.setTemAnimaisSimNao(1);
+        }else if(jRadioButton15.isSelected()){
+            p.setTemAnimaisSimNao(2);
+        }
+        
+        //quais animiais
+        p.setQuaisAnimais(jTextField36.getText());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     void fechaTela(){
